@@ -1,30 +1,57 @@
 # An Overview of HTTP
 
 ## Introduction
-In today's interconnected world, exchanging information between two devices is essential. But how do we make that possible? This is where the **HTTP protocol** comes in.
+In today’s interconnected world, exchanging information between devices is crucial. But how do we achieve that? The **HTTP protocol** is the answer.
+
+For a more detailed explanation, you can refer to the [MDN Web Docs - HTTP Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 
 ## What is HTTP?
-HTTP (Hypertext Transfer Protocol) is the backbone of data communication on the Web. It’s a protocol designed for fetching resources, such as HTML documents, and forms the foundation of data exchange on the internet.
+HTTP (Hypertext Transfer Protocol) is the cornerstone of data communication on the Web. It’s a protocol designed to fetch resources like HTML documents and forms the basis for most data exchanges on the internet.
 
 ![Fetching a Page from Web Server](images/fetching-a-page.svg)
 
 ## How Does HTTP Work?
-HTTP is a **client-server protocol**, meaning that requests are initiated by the client, typically a web browser. A complete document is usually constructed from multiple resources, including HTML files, CSS files, images, and more.
+HTTP operates as a **client-server protocol**. This means that requests are initiated by the client—typically a web browser—and the server responds with the requested resources. A complete document is often assembled from various resources, such as HTML files, CSS files, images, and more.
 
-Clients and servers communicate by exchanging individual messages rather than a continuous stream of data. The messages sent by the client are called **requests**, and those sent by the server in response are called **responses**.
+Communication between clients and servers occurs through the exchange of individual messages, not continuous data streams. The client sends **requests**, and the server replies with **responses**.
 
 ![HTTP Layers](images/http-layers.svg)
 
-HTTP operates at the application layer and is sent over the TCP (Transmission Control Protocol).
+HTTP works at the application layer and is transmitted over the Transmission Control Protocol (TCP).
 
 ## Components of an HTTP-Based System
-HTTP-based systems follow a client-server architecture. Here are the key components:
+HTTP-based systems use a client-server architecture. The key components include:
 
-- **Client:** The entity that initiates the requests. This could be a user-agent, such as a web browser, or a proxy.
-- **Server:** The entity that handles the requests and sends back a response.
-- **Proxies:** Intermediary entities that sit between the client and server. Proxies perform various operations, acting as gateways or caches to improve efficiency and security.
+- **Client:** The entity initiating the requests, often a user-agent like a web browser or a proxy.
+- **Server:** The entity handling the requests and returning the responses.
+- **Proxies:** Intermediary entities between the client and server, performing operations like caching or acting as gateways to improve performance and security.
 
 ![Client Server Chain](images/client-server-chain.svg)
 
+## HTTP Messages
+HTTP messages are structured within a binary frame, which allows for optimizations like header compression and multiplexing.
+
+### Request Messages
+A request message consists of several components:
+
+![Request Message](images/http-request.svg)
+
+- **HTTP Method:** Defines the action the user wants to perform (e.g., GET, POST).
+- **Resource Path:** Specifies the location of the resource to fetch.
+- **HTTP Version:** Indicates the version of the HTTP protocol being used.
+- **Headers:** Optional fields that provide additional information for the server.
+- **Body:** Used in methods like `POST` to include data with the request.
+
+### Response Messages
+A response message is structured as follows:
+
+![Response Message](images/http-response.svg)
+
+- **HTTP Version:** Indicates the version of the HTTP protocol used in the response.
+- **Status Code:** Shows whether the request was successful or not, along with the reason.
+- **Status Message:** A short, non-authoritative description of the status code.
+- **Headers:** Similar to request headers, these provide additional information.
+- **Body:** Optionally contains the requested resource or error message.
+
 ## Summary
-HTTP is a crucial protocol that enables web communication by allowing clients and servers to exchange messages. Understanding its components and how it functions is key to grasping the fundamentals of web interactions.
+HTTP is a vital protocol enabling web communication by facilitating the exchange of messages between clients and servers. Understanding its components and how it works is essential to grasping the fundamentals of web interactions.
