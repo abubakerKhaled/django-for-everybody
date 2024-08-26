@@ -1,5 +1,31 @@
 # SQL Overview
 
+## Table of Contents
+1. [What is SQL?](#what-is-sql)
+2. [Why is SQL Important?](#why-is-sql-important)
+   - [History of SQL](#history-of-sql)
+3. [Components of a SQL System](#components-of-a-sql-system)
+   - [SQL Tables](#sql-tables)
+   - [SQL Statements](#sql-statements)
+   - [Stored Procedures](#stored-procedures)
+4. [How SQL Works](#how-sql-works)
+   - [Parser](#parser)
+   - [Relational Engine](#relational-engine)
+   - [Storage Engine](#storage-engine)
+5. [SQL Commands](#sql-commands)
+   - [Data Definition Language (DDL)](#data-definition-language-ddl)
+   - [Data Query Language (DQL)](#data-query-language-dql)
+   - [Data Manipulation Language (DML)](#data-manipulation-language-dml)
+   - [Data Control Language (DCL)](#data-control-language-dcl)
+   - [Transaction Control Language (TCL)](#transaction-control-language-tcl)
+6. [SQL Standards](#sql-standards)
+7. [SQL Injection](#sql-injection)
+8. [What is MySQL?](#what-is-mysql)
+   - [SQL vs. MySQL](#sql-vs-mysql)
+9. [What is NoSQL?](#what-is-nosql)
+   - [SQL vs. NoSQL](#sql-vs-nosql)
+10. [What is SQL Server?](#what-is-sql-server)
+
 ## What is SQL?
 **Structured Query Language (SQL)** is a standardized programming language used for managing and manipulating relational databases. SQL is essential for tasks such as querying data, updating records, and administering databases.
 
